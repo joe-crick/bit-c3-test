@@ -6453,7 +6453,7 @@ define('npm-utils', function (require, exports, module) {
                 for (; i < len; i++) {
                     res = fn.call(arr, arr[i]);
                     if (res) {
-                        out.push(res);
+                        out.push(arr[i]);
                     }
                 }
                 return out;
@@ -7288,7 +7288,8 @@ define('package.json!npm', [
                     'cssify',
                     'documentjs'
                 ],
-                'directories': { 'lib': 'src' }
+                'directories': { 'lib': 'src' },
+                'main': 'bit-c3'
             },
             'globalBrowser': {},
             'browser': {}
@@ -7408,7 +7409,8 @@ define('package.json!npm', [
                             }
                         }
                     }
-                }
+                },
+                'main': 'can'
             },
             'globalBrowser': {},
             'browser': {
@@ -7473,22 +7475,30 @@ define('package.json!npm', [
             'browser': {}
         },
         {
+            'name': 'd3',
+            'version': '4.1.1',
+            'fileUrl': './node_modules/d3/package.json',
+            'main': 'build/d3.node.js',
+            'globalBrowser': {},
+            'browser': 'build/d3.js'
+        },
+        {
+            'name': 'd3',
+            'version': '3.5.0',
+            'fileUrl': './node_modules/bit-c3/node_modules/d3/package.json',
+            'main': 'index.js',
+            'globalBrowser': {},
+            'browser': 'd3.js',
+            'jspm': { 'main': 'd3' },
+            'jam': { 'main': 'd3.js' }
+        },
+        {
             'name': 'c3',
             'version': '0.4.10',
             'fileUrl': './node_modules/c3/package.json',
             'main': 'c3.js',
             'globalBrowser': {},
             'browser': {}
-        },
-        {
-            'name': 'd3',
-            'version': '3.5.0',
-            'fileUrl': './node_modules/d3/package.json',
-            'main': 'index.js',
-            'globalBrowser': {},
-            'browser': 'd3.js',
-            'jspm': { 'main': 'd3' },
-            'jam': { 'main': 'd3.js' }
         },
         {
             'name': 'jquery',
@@ -35731,14 +35741,16 @@ define('app', function (require, exports, module) {
     var $ = require('jquery');
     require('bit-c3');
     require('can/view/stache/stache');
-    var bitC3template = can.stache('<bit-c3>' + '<bit-c3-data>' + '<bit-c3-data-column key="dataSource" value="{dataSource}" />' + '</bit-c3-data>' + '</bit-c3>');
-    $('body').append(bitC3template({
-        dataSource: new can.List([
-            1,
-            2,
-            3
-        ])
-    }));
+    var bitC3template = can.stache('<bit-c3>' + '<bit-c3-data>' + '<bit-c3-data-column key="dataSource" value="{dataSource}" />' + '</bit-c3-data>' + '</bit-c3>' + '<p>Test</p>');
+    $(function () {
+        $('body').append(bitC3template({
+            dataSource: new can.List([
+                1,
+                2,
+                3
+            ])
+        }));
+    });
 });
 /*[import-main-module]*/
 System["import"]('package.json!npm').then(function() {

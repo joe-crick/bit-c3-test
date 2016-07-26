@@ -48,11 +48,12 @@
   "dependencies": {
     "bit-c3": "^0.1.2",
     "can": "^2.3.24",
+    "d3": "^4.1.1",
     "jquery": "^3.1.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "steal": "^0.16.28",
+    "steal": "^0.16.29",
     "steal-tools": "^0.16.6"
   }
 }
