@@ -22,6 +22,5 @@ $(function() {
 		dataSource: new can.List([1, 2, 3])
 	}));
 
-	// d3.selectAll("p").style("color", "white");
 });
 
