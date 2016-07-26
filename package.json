@@ -1,0 +1,58 @@
+{
+  "name": "bit-c3-test",
+  "version": "1.0.0",
+  "description": "bit-c3 test",
+  "main": "app.js",
+  "scripts": {
+    "build": "steal-tools",
+    "debug": "steal-tools --watch",
+    "start": "http-server"
+  },
+  "system": {
+    "npmAlgorithm": "flat",
+    "npmIgnore": [
+      "browser-sync",
+      "del",
+      "documentjs",
+      "glob",
+      "gulp",
+      "gulp-autoprefixer",
+      "gulp-less",
+      "gulp-minify-css",
+      "gulp-notify",
+      "gulp-rename",
+      "gulp-replace",
+      "gulp-sourcemaps",
+      "gulp-util",
+      "gulp-jshint",
+      "through2",
+      "merge2",
+      "pretty-hrtime",
+      "require-dir",
+      "run-sequence",
+      "stream-from-promise",
+      "testee"
+    ],
+    "bundlesPath": "./target",
+    "meta": {
+      "jasmine-jquery/lib/jasmine-jquery": {
+        "deps": [
+          "jquery",
+          "steal-jasmine"
+        ]
+      }
+    }
+  },
+  "author": "Joe Crick",
+  "license": "MIT",
+  "dependencies": {
+    "bit-c3": "^0.1.2",
+    "can": "^2.3.24",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "steal": "^0.16.28",
+    "steal-tools": "^0.16.6"
+  }
+}
