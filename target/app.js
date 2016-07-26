@@ -7294,14 +7294,6 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'jquery',
-            'version': '3.1.0',
-            'fileUrl': './node_modules/jquery/package.json',
-            'main': 'dist/jquery.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'can',
             'version': '2.3.24',
             'fileUrl': './node_modules/can/package.json',
@@ -7473,14 +7465,12 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'd3',
-            'version': '3.5.0',
-            'fileUrl': './node_modules/d3/package.json',
-            'main': 'index.js',
+            'name': 'jquery',
+            'version': '3.1.0',
+            'fileUrl': './node_modules/jquery/package.json',
+            'main': 'dist/jquery.js',
             'globalBrowser': {},
-            'browser': 'd3.js',
-            'jspm': { 'main': 'd3' },
-            'jam': { 'main': 'd3.js' }
+            'browser': {}
         },
         {
             'name': 'c3',
@@ -7489,6 +7479,16 @@ define('package.json!npm', [
             'main': 'c3.js',
             'globalBrowser': {},
             'browser': {}
+        },
+        {
+            'name': 'd3',
+            'version': '3.5.0',
+            'fileUrl': './node_modules/d3/package.json',
+            'main': 'index.js',
+            'globalBrowser': {},
+            'browser': 'd3.js',
+            'jspm': { 'main': 'd3' },
+            'jam': { 'main': 'd3.js' }
         },
         {
             'name': 'jquery',
@@ -35744,4 +35744,3 @@ define('app', function (require, exports, module) {
 System["import"]('package.json!npm').then(function() {
 System["import"]('app'); 
 });
-//# sourceMappingURL=app.js.map

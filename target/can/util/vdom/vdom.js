@@ -1035,4 +1035,3 @@ define('can@2.3.24#util/vdom/vdom', [
         replaceState: can.k
     };
 });
-//# sourceMappingURL=vdom.js.map
