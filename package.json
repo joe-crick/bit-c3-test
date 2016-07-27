@@ -4,7 +4,7 @@
   "description": "bit-c3 test",
   "main": "app.js",
   "scripts": {
-    "build": "steal-tools",
+    "build": "steal-tools --no-minify",
     "debug": "steal-tools --watch",
     "start": "http-server"
   },
@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "steal": "^0.16.29",
+    "steal": "^0.16.33",
     "steal-tools": "^0.16.6"
   }
 }
